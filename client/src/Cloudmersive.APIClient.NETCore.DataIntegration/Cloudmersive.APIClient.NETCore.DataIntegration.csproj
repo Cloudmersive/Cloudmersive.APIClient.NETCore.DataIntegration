@@ -1,0 +1,28 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard1.3</TargetFramework>
+    <AssemblyName>Cloudmersive.APIClient.NETCore.DataIntegration</AssemblyName>
+    <PackageId>Cloudmersive.APIClient.NETCore.DataIntegration</PackageId>
+    <OutputType>Library</OutputType>
+    <Authors>Cloudmersive</Authors>
+    <Company>Cloudmersive</Company>
+    <AssemblyTitle>Cloudmersive Video and Media Services API Client</AssemblyTitle>
+    <Description>Convert and encode video and media files and content between file formats. On-demand.</Description>
+    <Copyright>No Copyright</Copyright>
+    <GenerateRuntimeConfigurationFiles>true</GenerateRuntimeConfigurationFiles>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <GenerateBindingRedirectsOutputType>true</GenerateBindingRedirectsOutputType>
+    <RootNamespace>Cloudmersive.APIClient.NETCore.DataIntegration</RootNamespace>
+    <Version>2.0.1</Version>
+  <PackageIconUrl>https://cloudmersive.com/images/cmsdk_core.png</PackageIconUrl><PackageLicenseExpression>Apache-2.0</PackageLicenseExpression><PackageProjectUrl>https://cloudmersive.com/video-and-media-services-api</PackageProjectUrl></PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="FubarCoder.RestSharp.Portable.Core" Version="4.0.7" />
+    <PackageReference Include="FubarCoder.RestSharp.Portable.HttpClient" Version="4.0.7" />
+    <PackageReference Include="Newtonsoft.Json" Version="10.0.3" />
+    <PackageReference Include="JsonSubTypes" Version="1.2.0" />
+  </ItemGroup>
+
+
+</Project>

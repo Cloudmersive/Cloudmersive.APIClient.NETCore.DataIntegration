@@ -1,7 +1,7 @@
 ﻿{
 
   "packageName" : "Cloudmersive.APIClient.NETCore.DataIntegration",
-  "packageVersion": "2.0.1",
+  "packageVersion": "2.0.2",
   "netCoreProjectFile": "true",
   "packageGuid": "edfb2320-5eaf-4e57-af6a-691ca071c4ac",
   "targetFramework": "v5.0"

@@ -17,6 +17,8 @@
 (Get-Content '.\client\src\Cloudmersive.APIClient.NETCore.DataIntegration\Cloudmersive.APIClient.NETCore.DataIntegration.csproj').replace('<PackageReference Include="RestSharp" Version="105.1.0" />', '<PackageReference Include="RestSharp" Version="106.6.10" />') | Set-Content '.\client\src\Cloudmersive.APIClient.NETCore.DataIntegration\Cloudmersive.APIClient.NETCore.DataIntegration.csproj'
 (Get-Content '.\client\src\Cloudmersive.APIClient.NETCore.DataIntegration\Client\ApiClient.cs').replace('request.AddFile(param.Value.Name, param.Value.Writer, param.Value.FileName, param.Value.ContentType);', 'request.AddFile(param.Value.Name, param.Value.Writer, param.Value.FileName, param.Value.ContentLength, param.Value.ContentType);') | Set-Content '.\client\src\Cloudmersive.APIClient.NETCore.DataIntegration\Client\ApiClient.cs'
 
+(Get-Content ./client/src/Cloudmersive.APIClient.NETCore.DataIntegration/Cloudmersive.APIClient.NETCore.DataIntegration.csproj).replace('</ItemGroup>', '</ItemGroup><Target Name="PostBuild" AfterTargets="PostBuildEvent">    <Exec Command="call powershell C:\CodeSigning\sign.ps1  $(TargetPath)" />  </Target>') | Set-Content ./client/src/Cloudmersive.APIClient.NETCore.DataIntegration/Cloudmersive.APIClient.NETCore.DataIntegration.csproj
+
 & dotnet build ./client/src/Cloudmersive.APIClient.NETCore.DataIntegration/Cloudmersive.APIClient.NETCore.DataIntegration.csproj -c Release
 & dotnet pack ./client/src/Cloudmersive.APIClient.NETCore.DataIntegration/Cloudmersive.APIClient.NETCore.DataIntegration.csproj -c Release
 
